@@ -1,1 +1,1 @@
-My shell_redirections readme
+my redirections readme
