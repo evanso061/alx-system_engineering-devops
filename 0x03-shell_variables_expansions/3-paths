@@ -1,12 +1,2 @@
 #!/bin/bash
-
-# Remove any trailing colons from the PATH variable
-path=${PATH%:}
-
-# Count the number of colons in the PATH and add 1
-count=$(awk -F: '{print NF}' <<< "$path")
-((count++))
-
-# Print the result
-echo "$count"
-
+echo $((`echo $PATH | grep -o ":/" | wc -l`+ 1))
